@@ -33,6 +33,19 @@ $ pipx install ghunt
 ```
 It will automatically use venvs to avoid dependency conflicts with other projects.
 
+## Docker Installation
+
+You can also run GHunt using Docker :
+
+```bash
+$ docker build -t ghunt:latest .
+$ docker run -it --name ghunt ghunt:latest login
+$ docker start ghunt
+$ docker exec -it ghunt ghunt email <email_address>
+```
+
+**Note:** When using Docker, login method 1 (listener mode) is not compatible. Use methods 2 or 3 for authentication.
+
 # 💃 Usage
 
 ## Login
